@@ -7,22 +7,19 @@ const Card = props => {
 
 const styles = {
   containerStyle: {
-    borderWidth: 0,
+    borderWidth: 1,
     borderRadius: 2,
-    borderColor: "",
+    borderColor: "#ddd",
     borderBottomWidth: 0,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.1,
     shadowRadius: 2,
     elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10,
-    marginBottom: 8,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10
+    marginLeft: 0,
+    marginRight: 0,
+    marginTop: 10
   }
 };
 
-export { Card };
+export default Card;

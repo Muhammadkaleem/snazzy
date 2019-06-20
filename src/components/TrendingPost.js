@@ -10,53 +10,32 @@ class TrendingPost extends React.Component {
       <Card>
         <CardSection>
           <View style={ViewStyle}>
-            <Image
-              source={require("../images/Rosse.jpeg")}
-              style={ImageStyle}
-            />
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
             <Text style={textStyle}>Trending</Text>
           </View>
           <View style={ViewStyle}>
-            <Image
-              source={require("../images/Rosse.jpeg")}
-              style={ImageStyle}
-            />
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
             <Text style={textStyle}>Trending</Text>
           </View>
 
           <View style={ViewStyle}>
-            <Image
-              source={require("../images/Rosse.jpeg")}
-              style={ImageStyle}
-            />
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
             <Text style={textStyle}>Trending</Text>
           </View>
           <View style={ViewStyle}>
-            <Image
-              source={require("../images/Rosse.jpeg")}
-              style={ImageStyle}
-            />
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
             <Text style={textStyle}>Trending</Text>
           </View>
           <View style={ViewStyle}>
-            <Image
-              source={require("../images/Rosse.jpeg")}
-              style={ImageStyle}
-            />
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
             <Text style={textStyle}>Trending</Text>
           </View>
           <View style={ViewStyle}>
-            <Image
-              source={require("../images/Rosse.jpeg")}
-              style={ImageStyle}
-            />
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
             <Text style={textStyle}>Trending</Text>
           </View>
           <View style={ViewStyle}>
-            <Image
-              source={require("../images/Rosse.jpeg")}
-              style={ImageStyle}
-            />
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
             <Text style={textStyle}>Trending</Text>
           </View>
         </CardSection>
