@@ -2,50 +2,133 @@ import React, { Component } from "react";
 import { View, ScrollView, Image, Text } from "react-native";
 import { Card, CardSection } from "./common";
 import TrendingPost from "./TrendingPost";
-
-const News = () => {
-  const { ImageStyle, ViewStyle, DecTextStyle } = styles;
+import Icon from "react-native-vector-icons/Ionicons";
+import { createMaterialTopTabNavigator } from "react-navigation";
+import Profile from "./Profile";
+const News = props => {
+  console.log("props", props);
+  const {
+    ImageStyle,
+    ViewStyle,
+    DecTextStyle,
+    flameStyle,
+    ViewTextStyle,
+    iconStyle,
+    PlusButtonsStyle
+  } = styles;
+  props.navigation.openDrawer();
   return (
-    <ScrollView>
-      <TrendingPost />
+    <View>
+      <ScrollView>
+        <TrendingPost />
 
-      <Card>
-        <CardSection>
-          <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
-        </CardSection>
-        <CardSection>
-          <View style={ViewStyle} />
-          <Text style={DecTextStyle}>this is description Text</Text>
-        </CardSection>
-      </Card>
-      <Card>
-        <CardSection>
-          <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
-        </CardSection>
-        <CardSection>
-          <View style={ViewStyle} />
-          <Text style={DecTextStyle}>this is description Text</Text>
-        </CardSection>
-      </Card>
-      <Card>
-        <CardSection>
-          <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
-        </CardSection>
-        <CardSection>
-          <View style={ViewStyle} />
-          <Text style={DecTextStyle}>this is description Text</Text>
-        </CardSection>
-      </Card>
-      <Card>
-        <CardSection>
-          <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
-        </CardSection>
-        <CardSection>
-          <View style={ViewStyle} />
-          <Text style={DecTextStyle}>this is description Text</Text>
-        </CardSection>
-      </Card>
-    </ScrollView>
+        <Card>
+          <CardSection>
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <View style={flameStyle}>
+              <Icon name="md-eye" style={iconStyle} size={20} />
+              <Text style={ViewTextStyle}>4.5k</Text>
+              <Icon name="md-flower" style={iconStyle} size={20} />
+            </View>
+          </CardSection>
+
+          <CardSection>
+            <View style={ViewStyle} />
+            <Text style={DecTextStyle}>this is description Text</Text>
+          </CardSection>
+        </Card>
+        <Card>
+          <CardSection>
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <View style={flameStyle}>
+              <Icon name="md-eye" style={iconStyle} size={20} />
+              <Text style={ViewTextStyle}>4.5k</Text>
+              <Icon name="md-flower" style={iconStyle} size={20} />
+            </View>
+          </CardSection>
+
+          <CardSection>
+            <View style={ViewStyle} />
+            <Text style={DecTextStyle}>this is description Text</Text>
+          </CardSection>
+        </Card>
+        <Card>
+          <CardSection>
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <View style={flameStyle}>
+              <Icon name="md-eye" style={iconStyle} size={20} />
+              <Text style={ViewTextStyle}>4.5k</Text>
+              <Icon name="md-flower" style={iconStyle} size={20} />
+            </View>
+          </CardSection>
+
+          <CardSection>
+            <View style={ViewStyle} />
+            <Text style={DecTextStyle}>this is description Text</Text>
+          </CardSection>
+        </Card>
+        <Card>
+          <CardSection>
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <View style={flameStyle}>
+              <Icon name="md-eye" style={iconStyle} size={20} />
+              <Text style={ViewTextStyle}>4.5k</Text>
+              <Icon name="md-flower" style={iconStyle} size={20} />
+            </View>
+          </CardSection>
+
+          <CardSection>
+            <View style={ViewStyle} />
+            <Text style={DecTextStyle}>this is description Text</Text>
+          </CardSection>
+        </Card>
+        <Card>
+          <CardSection>
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <View style={flameStyle}>
+              <Icon name="md-eye" style={iconStyle} size={20} />
+              <Text style={ViewTextStyle}>4.5k</Text>
+              <Icon name="md-flower" style={iconStyle} size={20} />
+            </View>
+          </CardSection>
+
+          <CardSection>
+            <View style={ViewStyle} />
+            <Text style={DecTextStyle}>this is description Text</Text>
+          </CardSection>
+        </Card>
+        <Card>
+          <CardSection>
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <View style={flameStyle}>
+              <Icon name="md-eye" style={iconStyle} size={20} />
+              <Text style={ViewTextStyle}>4.5k</Text>
+              <Icon name="md-flower" style={iconStyle} size={20} />
+            </View>
+          </CardSection>
+
+          <CardSection>
+            <View style={ViewStyle} />
+            <Text style={DecTextStyle}>this is description Text</Text>
+          </CardSection>
+        </Card>
+        <Card>
+          <CardSection>
+            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <View style={flameStyle}>
+              <Icon name="md-eye" style={iconStyle} size={20} />
+              <Text style={ViewTextStyle}>4.5k</Text>
+              <Icon name="md-flower" style={iconStyle} size={20} />
+            </View>
+          </CardSection>
+
+          <CardSection>
+            <View style={ViewStyle} />
+            <Text style={DecTextStyle}>this is description Text</Text>
+          </CardSection>
+        </Card>
+      </ScrollView>
+    </View>
   );
 };
 const styles = {
@@ -53,6 +136,7 @@ const styles = {
     width: 350,
     marginTop: 0,
     marginRight: 0,
+    marginBottom: 2,
     paddingLeft: 0,
     paddingRight: 0,
     height: 250,
@@ -74,6 +158,44 @@ const styles = {
     marginTop: -50,
     marginLeft: -50,
     color: "white"
+  },
+  flameStyle: {
+    marginLeft: -105,
+    flexDirection: "row",
+    height: 30,
+    width: 100,
+    backgroundColor: "#414141",
+    alignItem: "center",
+    justifyContent: "center",
+    marginTop: 10,
+
+    borderRadius: 7,
+    position: "relative"
+  },
+  ViewTextStyle: {
+    marginLeft: 7,
+    marginRight: 7,
+    color: "#f2f2f2",
+    fontSize: 15,
+    marginTop: 5,
+    marginBottom: 5
+  },
+  iconStyle: {
+    marginBottom: 5,
+    marginTop: 5,
+    color: "#f2f2f2"
+  },
+  PlusButtonsStyle: {
+    position: "absolute",
+    flex: 0.1,
+    left: 0,
+    right: 0,
+    bottom: -10,
+    backgroundColor: "green",
+    flexDirection: "row",
+    height: 80,
+    alignItems: "center"
   }
 };
+
 export default News;

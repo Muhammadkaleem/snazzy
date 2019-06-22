@@ -1,13 +1,14 @@
 import React from "react";
 import { View } from "react-native";
 
-const Card = props => {
+const PostArea = props => {
   return <View style={styles.containerStyle}>{props.children}</View>;
 };
 
 const styles = {
   containerStyle: {
     borderWidth: 0,
+    borderRadius: 2,
     borderColor: "",
     borderBottomWidth: 0,
     shadowColor: "#000",
@@ -17,9 +18,10 @@ const styles = {
     elevation: 1,
     marginLeft: 5,
     marginRight: 5,
-    marginTop: 10,
-    borderRadius: 10
+    marginTop: 0,
+
+    borderRadius: 5
   }
 };
 
-export { Card };
+export { PostArea };
