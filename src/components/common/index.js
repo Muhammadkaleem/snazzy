@@ -8,3 +8,5 @@ export * from "./ProfileHeader";
 export * from "./ProfileFooter";
 export * from "./CaptainArea";
 export * from "./PostArea";
+export * from "./AddButton";
+export * from "./SubAddButton";

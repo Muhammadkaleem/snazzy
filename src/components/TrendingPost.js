@@ -3,9 +3,11 @@ import { Image, Text, View, ScrollView } from "react-native";
 import Card from "./TRpost/Card";
 import CardSection from "./TRpost/CardSection";
 import Icon from "react-native-vector-icons/Ionicons";
-
+import { withNavigation } from "react-navigation";
+import Profile from "./Profile";
 class TrendingPost extends React.Component {
   render() {
+    console.log("this.props.navigation", this.props);
     const {
       ImageStyle,
       ViewStyle,
@@ -26,7 +28,14 @@ class TrendingPost extends React.Component {
                 <Icon
                   name="md-eye"
                   size={20}
-                  onPress={() => this.props.navigation.navigate("News")}
+                  onPress={() => {
+                    try {
+                      console.log("button", "clicked");
+                      this.props.navigation.navigate("Profile");
+                    } catch (e) {
+                      console.log("error", e);
+                    }
+                  }}
                 />
                 <Text style={IconTextStyle}>542,543,43432</Text>
                 <Icon
@@ -143,7 +152,8 @@ const styles = {
   },
   IconViewstyle: {
     flexDirection: "row",
-    marginLeft: 100
+    marginLeft: 100,
+    height: 30
   },
   IconStyle: {
     marginLeft: 5,
@@ -155,4 +165,4 @@ const styles = {
   }
 };
 
-export default TrendingPost;
+export default withNavigation(TrendingPost);

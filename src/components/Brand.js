@@ -18,6 +18,14 @@ class Brand extends Component {
                 <Image
                   source={require("../images/Rosse.jpg")}
                   style={ImageStyle}
+                  onPress={() => {
+                    try {
+                      console.log("button", "clicked");
+                      this.props.navigation.navigate("BrandProfile");
+                    } catch (e) {
+                      console.log("error", e);
+                    }
+                  }}
                 />
               </CardSection>
             </Card>

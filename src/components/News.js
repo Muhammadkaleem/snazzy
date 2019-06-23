@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { View, ScrollView, Image, Text } from "react-native";
-import { Card, CardSection } from "./common";
+import React, {Component} from "react";
+import {Image, ScrollView, Text, View} from "react-native";
+import {Card, CardSection} from "./common";
 import TrendingPost from "./TrendingPost";
 import Icon from "react-native-vector-icons/Ionicons";
-import { createMaterialTopTabNavigator } from "react-navigation";
-import Profile from "./Profile";
+import {withNavigation} from 'react-navigation'
+
 const News = props => {
   console.log("props", props);
   const {
@@ -16,11 +16,10 @@ const News = props => {
     iconStyle,
     PlusButtonsStyle
   } = styles;
-  props.navigation.openDrawer();
   return (
     <View>
       <ScrollView>
-        <TrendingPost />
+        <TrendingPost navigation={props.navigation}/>
 
         <Card>
           <CardSection>
@@ -198,4 +197,4 @@ const styles = {
   }
 };
 
-export default News;
+export default withNavigation(News);

@@ -1,24 +1,35 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { View } from "react-native";
 import Brand from "../components/Brand";
 import News from "../components/News";
 import MainNews from "../components/MainNews";
 import CelbFeeds from "../components/CelbFeeds";
-
+import { AddButton } from "../components/common";
 import Icon from "react-native-vector-icons/Ionicons";
-import TrendingCelebs from "../components/TrendingCelebs";
-
 import {
+  createDrawerNavigator,
   createMaterialTopTabNavigator,
-  createStackNavigator,
-  createDrawerNavigator
+  createStackNavigator
 } from "react-navigation";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
+import SideMenu from "../components/SideMenu";
 import Profile from "../components/Profile";
-let TopTabs = createMaterialTopTabNavigator(
+import TrendingPost from "../components/TrendingPost";
+
+let NewsStack = createStackNavigator(
+  {
+    News: { screen: News },
+    Profile: { screen: Profile }
+  },
+  {
+    initialRouteName: "News",
+    headerMode: "none"
+  }
+);
+export const TopTabs = createMaterialTopTabNavigator(
   {
     HOME: {
-      screen: News,
+      screen: NewsStack,
       navigationOptions: {
         TabBarLable: "Celebs",
         tabBarIcon: ({ tintColor }) => (
@@ -61,29 +72,13 @@ export const BottomStack = createMaterialBottomTabNavigator(
         )
       }
     },
-    this: {
-      screen: CelbFeeds,
-      navigationOptions: {
-        TabBarLable: ".",
-        tabBarIcon: ({ tintColor }) => (
-          <View
-            style={{
-              height: 60,
-              width: 60,
-              borderRadius: 50,
-              backgroundColor: "red",
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop: -9,
-              borderColor: "#ffff",
-              borderWidth: 3
-            }}
-          >
-            <Icon name="md-add" color={tintColor} size={20} />
-          </View>
-        )
-      }
+    Adding: {
+      screen: () => null, // Empty screen
+      navigationOptions: () => ({
+        tabBarIcon: <AddButton /> // Plus button component
+      })
     },
+
     Brands: {
       screen: Brand,
       navigationOptions: {
@@ -104,24 +99,77 @@ export const BottomStack = createMaterialBottomTabNavigator(
     }
   },
   {
-    activeTintColor: "white",
-    shifting: false
+    tabBarComponent: props => {
+      const {
+        navigation: {
+          state: { index, routes }
+        },
+        style,
+        activeTintColor,
+        inactiveTintColor,
+        renderIcon,
+        jumpTo
+      } = props;
+      return (
+        <ViewOverflow
+          style={{
+            flexDirection: "row",
+            height: 50,
+            width: "100%",
+            ...style
+          }}
+        >
+          {routes.map((route, idx) => (
+            <ViewOverflow
+              key={route.key}
+              style={{
+                flex: 1,
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <TouchableWithoutFeedback onPress={() => jumpTo(route.key)}>
+                {renderIcon({
+                  route,
+                  focused: index === idx,
+                  tintColor: index === idx ? activeTintColor : inactiveTintColor
+                })}
+              </TouchableWithoutFeedback>
+            </ViewOverflow>
+          ))}
+        </ViewOverflow>
+      );
+    },
+    tabBarOptions: {
+      showLabel: false,
+      activeTintColor: "#F8F8F8",
+      inactiveTintColor: "#586589",
+      style: {
+        backgroundColor: "#171F33"
+      },
+      tabStyle: {}
+    }
   }
 );
 
-let DrawwerAppNavigator = createDrawerNavigator({
-  TopTabs: TopTabs,
-  Home: Profile,
-  search: TrendingCelebs
-});
-
-let MainStack = createStackNavigator(
+let DrawerAppNavigator = createDrawerNavigator(
   {
-    DrawwerAppNavigator: { screen: DrawwerAppNavigator },
     BottomStack: { screen: BottomStack }
   },
   {
-    initialRouteName: "BottomStack",
+    contentComponent: SideMenu,
+    drawerWidth: 300,
+    drawerPosition: "left",
+    lazy: true
+  }
+);
+
+let MainStack = createStackNavigator(
+  {
+    DrawerAppNavigator: { screen: DrawerAppNavigator }
+  },
+  {
+    initialRouteName: "DrawerAppNavigator",
     headerMode: "none"
   }
 );
@@ -133,6 +181,7 @@ export const RootStack = createStackNavigator(
   },
   {
     initialRouteName: "MainStack",
-    headerMode: "none"
+    headerMode: "none",
+    animationEnabled: true
   }
 );
