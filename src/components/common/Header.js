@@ -28,7 +28,7 @@ const styles = {
     shadowOpacity: 0.8,
     elevation: 2,
     position: "relative",
-    marginTop: 80
+    marginTop: 0
   }
 };
 

@@ -51,54 +51,54 @@ class TrendingPost extends React.Component {
           <ScrollView horizontal={true}>
             <View style={ViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image2.jpg")}
                 style={ImageStyle}
               />
 
-              <Text style={textStyle}>Trending</Text>
+              <Text style={textStyle}>jam anderson roy</Text>
             </View>
             <View style={ViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image3.jpg")}
                 style={ImageStyle}
               />
-              <Text style={textStyle}>Trending</Text>
+              <Text style={textStyle}>wiliumson</Text>
             </View>
 
             <View style={ViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image4.jpg")}
                 style={ImageStyle}
               />
-              <Text style={textStyle}>Trending</Text>
+              <Text style={textStyle}>david Warner</Text>
             </View>
             <View style={ViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image5.jpg")}
                 style={ImageStyle}
               />
-              <Text style={textStyle}>Trending</Text>
+              <Text style={textStyle}>Shahid khan</Text>
             </View>
             <View style={ViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image4.jpg")}
                 style={ImageStyle}
               />
-              <Text style={textStyle}>Trending</Text>
+              <Text style={textStyle}>Rahat Ali</Text>
             </View>
             <View style={ViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image3.jpg")}
                 style={ImageStyle}
               />
-              <Text style={textStyle}>Trending</Text>
+              <Text style={textStyle}>Asif Ali</Text>
             </View>
             <View style={ViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image2.jpg")}
                 style={ImageStyle}
               />
-              <Text style={textStyle}>Trending</Text>
+              <Text style={textStyle}>M kaleem</Text>
             </View>
           </ScrollView>
         </CardSection>
@@ -106,9 +106,13 @@ class TrendingPost extends React.Component {
         <Card>
           <CardSection>
             <View style={TrendingNewsViewStyle}>
-              <Text style={TrendingTextStyle}>Trending News</Text>
+              <Text style={TrendingTextStyle}>Trending</Text>
               <View style={IconViewstyle}>
-                <Icon name="md-trending-up" size={20} />
+                <Icon
+                  style={{ marginLeft: 50 }}
+                  name="md-trending-up"
+                  size={20}
+                />
                 <Text style={IconTextStyle}>98,345,6426</Text>
               </View>
             </View>

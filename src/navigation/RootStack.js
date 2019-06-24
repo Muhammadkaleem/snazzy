@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+
 import Brand from "../components/Brand";
 import News from "../components/News";
 import MainNews from "../components/MainNews";
@@ -11,6 +11,7 @@ import {
   createMaterialTopTabNavigator,
   createStackNavigator
 } from "react-navigation";
+import { ScreenStack } from "../components/Brand";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 import SideMenu from "../components/SideMenu";
 import Profile from "../components/Profile";
@@ -19,7 +20,8 @@ import TrendingPost from "../components/TrendingPost";
 let NewsStack = createStackNavigator(
   {
     News: { screen: News },
-    Profile: { screen: Profile }
+    Profile: { screen: Profile },
+    Brand: { screen: Brand }
   },
   {
     initialRouteName: "News",
@@ -89,7 +91,7 @@ export const BottomStack = createMaterialBottomTabNavigator(
       }
     },
     Notifications: {
-      screen: CelbFeeds,
+      screen: Profile,
       navigationOptions: {
         TabBarLable: "Notifications",
         tabBarIcon: ({ tintColor }) => (
@@ -142,10 +144,10 @@ export const BottomStack = createMaterialBottomTabNavigator(
     },
     tabBarOptions: {
       showLabel: false,
-      activeTintColor: "#F8F8F8",
-      inactiveTintColor: "#586589",
+      activeTintColor: "Black",
+      inactiveTintColor: "Black",
       style: {
-        backgroundColor: "#171F33"
+        backgroundColor: "white"
       },
       tabStyle: {}
     }

@@ -7,6 +7,7 @@ const ProHeader = props => {
 
 const styles = {
   containerStyle: {
+    flex: 1,
     borderWidth: 0,
     borderRadius: 0,
     borderColor: "",

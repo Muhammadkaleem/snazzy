@@ -32,7 +32,7 @@ class CelbFeeds extends React.Component {
           <CardSection>
             <View style={mainViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image2.jpg")}
                 style={ImageStyle}
               />
               <View>
@@ -56,7 +56,7 @@ class CelbFeeds extends React.Component {
         <PostArea>
           <CardSection>
             <Image
-              source={require("../images/Rosse.jpg")}
+              source={require("../images/image3.jpg")}
               style={PostImageStyle}
             />
           </CardSection>
@@ -74,7 +74,7 @@ class CelbFeeds extends React.Component {
           <CardSection>
             <View style={mainViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image4.jpg")}
                 style={ImageStyle}
               />
               <View>
@@ -98,7 +98,7 @@ class CelbFeeds extends React.Component {
         <PostArea>
           <CardSection>
             <Image
-              source={require("../images/Rosse.jpg")}
+              source={require("../images/image5.jpg")}
               style={PostImageStyle}
             />
           </CardSection>
@@ -116,7 +116,7 @@ class CelbFeeds extends React.Component {
           <CardSection>
             <View style={mainViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image3.jpg")}
                 style={ImageStyle}
               />
               <View>
@@ -140,7 +140,7 @@ class CelbFeeds extends React.Component {
         <PostArea>
           <CardSection>
             <Image
-              source={require("../images/Rosse.jpg")}
+              source={require("../images/image2.jpg")}
               style={PostImageStyle}
             />
           </CardSection>
@@ -158,7 +158,7 @@ class CelbFeeds extends React.Component {
           <CardSection>
             <View style={mainViewStyle}>
               <Image
-                source={require("../images/Rosse.jpg")}
+                source={require("../images/image5.jpg")}
                 style={ImageStyle}
               />
               <View>
@@ -173,7 +173,7 @@ class CelbFeeds extends React.Component {
           <CardSection>
             <View style={CaptainViewStyle}>
               <Text>
-                this is an Awesome picture that is download from internet{" "}
+                this is an Awesome picture that is download from internet
               </Text>
             </View>
           </CardSection>
@@ -182,7 +182,7 @@ class CelbFeeds extends React.Component {
         <PostArea>
           <CardSection>
             <Image
-              source={require("../images/Rosse.jpg")}
+              source={require("../images/image2.jpg")}
               style={PostImageStyle}
             />
           </CardSection>
@@ -246,7 +246,7 @@ const styles = {
     paddingLeft: 40
   },
   PostImageStyle: {
-    width: 350,
+    flex: 1,
     marginTop: 0,
     marginRight: 0,
     paddingLeft: 0,

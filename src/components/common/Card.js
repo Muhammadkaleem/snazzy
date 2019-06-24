@@ -7,6 +7,7 @@ const Card = props => {
 
 const styles = {
   containerStyle: {
+    flex: 1,
     borderWidth: 0,
     borderColor: "",
     borderBottomWidth: 0,

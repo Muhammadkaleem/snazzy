@@ -1,9 +1,11 @@
-import React, {Component} from "react";
-import {Image, ScrollView, Text, View} from "react-native";
-import {Card, CardSection} from "./common";
+import React, { Component } from "react";
+import { Image, ScrollView, Text, View } from "react-native";
+import { Card, CardSection } from "./common";
 import TrendingPost from "./TrendingPost";
 import Icon from "react-native-vector-icons/Ionicons";
-import {withNavigation} from 'react-navigation'
+import { withNavigation } from "react-navigation";
+import faker from "faker";
+import { Action } from "react-native-router-flux";
 
 const News = props => {
   console.log("props", props);
@@ -19,11 +21,14 @@ const News = props => {
   return (
     <View>
       <ScrollView>
-        <TrendingPost navigation={props.navigation}/>
+        <TrendingPost navigation={props.navigation} />
 
         <Card>
           <CardSection>
-            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <Image
+              source={require("../images/image1.webp")}
+              style={ImageStyle}
+            />
             <View style={flameStyle}>
               <Icon name="md-eye" style={iconStyle} size={20} />
               <Text style={ViewTextStyle}>4.5k</Text>
@@ -38,7 +43,10 @@ const News = props => {
         </Card>
         <Card>
           <CardSection>
-            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <Image
+              source={require("../images/image2.jpg")}
+              style={ImageStyle}
+            />
             <View style={flameStyle}>
               <Icon name="md-eye" style={iconStyle} size={20} />
               <Text style={ViewTextStyle}>4.5k</Text>
@@ -53,7 +61,10 @@ const News = props => {
         </Card>
         <Card>
           <CardSection>
-            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <Image
+              source={require("../images/image3.jpg")}
+              style={ImageStyle}
+            />
             <View style={flameStyle}>
               <Icon name="md-eye" style={iconStyle} size={20} />
               <Text style={ViewTextStyle}>4.5k</Text>
@@ -68,7 +79,10 @@ const News = props => {
         </Card>
         <Card>
           <CardSection>
-            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <Image
+              source={require("../images/image4.jpg")}
+              style={ImageStyle}
+            />
             <View style={flameStyle}>
               <Icon name="md-eye" style={iconStyle} size={20} />
               <Text style={ViewTextStyle}>4.5k</Text>
@@ -83,7 +97,10 @@ const News = props => {
         </Card>
         <Card>
           <CardSection>
-            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <Image
+              source={require("../images/image5.jpg")}
+              style={ImageStyle}
+            />
             <View style={flameStyle}>
               <Icon name="md-eye" style={iconStyle} size={20} />
               <Text style={ViewTextStyle}>4.5k</Text>
@@ -98,7 +115,10 @@ const News = props => {
         </Card>
         <Card>
           <CardSection>
-            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <Image
+              source={require("../images/image6.jpg")}
+              style={ImageStyle}
+            />
             <View style={flameStyle}>
               <Icon name="md-eye" style={iconStyle} size={20} />
               <Text style={ViewTextStyle}>4.5k</Text>
@@ -113,7 +133,10 @@ const News = props => {
         </Card>
         <Card>
           <CardSection>
-            <Image source={require("../images/Rosse.jpg")} style={ImageStyle} />
+            <Image
+              source={require("../images/image3.jpg")}
+              style={ImageStyle}
+            />
             <View style={flameStyle}>
               <Icon name="md-eye" style={iconStyle} size={20} />
               <Text style={ViewTextStyle}>4.5k</Text>
@@ -130,23 +153,25 @@ const News = props => {
     </View>
   );
 };
+
 const styles = {
   ImageStyle: {
+    flex: 1,
     width: 350,
     marginTop: 0,
-    marginRight: 0,
-    marginBottom: 2,
+    marginRight: 5,
+    marginBottom: 0,
     paddingLeft: 0,
     paddingRight: 0,
-    height: 250,
     borderRadius: 10,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.1,
-    shadowRadius: 2
+    shadowRadius: 2,
+    height: 300
   },
   ViewStyle: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#930077",
     height: 50,
     width: 50,
     borderRadius: 50,

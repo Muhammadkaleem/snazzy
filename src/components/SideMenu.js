@@ -107,6 +107,12 @@ class SideMenu extends Component {
           <Icon style={{ marginRight: 20 }} name="md-star-half" size={20} />
         ),
         key: 9
+      },
+      {
+        name: "Logout",
+        screenName: "Packages",
+        icon: <Icon style={{ marginRight: 20 }} name="md-logout" size={20} />,
+        key: 10
       }
     ];
 

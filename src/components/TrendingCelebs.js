@@ -23,7 +23,7 @@ class TrendingCelebs extends React.Component {
               <View style={mainViewStyle}>
                 <View style={ProfileStyle}>
                   <Image
-                    source={require("../images/Brand.jpg")}
+                    source={require("../images/logo1.png ")}
                     style={imageStyle}
                   />
                 </View>
@@ -43,7 +43,7 @@ class TrendingCelebs extends React.Component {
               <View style={mainViewStyle}>
                 <View style={ProfileStyle}>
                   <Image
-                    source={require("../images/Brand.jpg")}
+                    source={require("../images/logo2.png ")}
                     style={imageStyle}
                   />
                 </View>
@@ -63,7 +63,7 @@ class TrendingCelebs extends React.Component {
               <View style={mainViewStyle}>
                 <View style={ProfileStyle}>
                   <Image
-                    source={require("../images/Brand.jpg")}
+                    source={require("../images/logo3.png ")}
                     style={imageStyle}
                   />
                 </View>
@@ -83,7 +83,7 @@ class TrendingCelebs extends React.Component {
               <View style={mainViewStyle}>
                 <View style={ProfileStyle}>
                   <Image
-                    source={require("../images/Brand.jpg")}
+                    source={require("../images/logo4.png ")}
                     style={imageStyle}
                   />
                 </View>
@@ -103,7 +103,7 @@ class TrendingCelebs extends React.Component {
               <View style={mainViewStyle}>
                 <View style={ProfileStyle}>
                   <Image
-                    source={require("../images/Brand.jpg")}
+                    source={require("../images/logo5.png ")}
                     style={imageStyle}
                   />
                 </View>
@@ -123,7 +123,7 @@ class TrendingCelebs extends React.Component {
               <View style={mainViewStyle}>
                 <View style={ProfileStyle}>
                   <Image
-                    source={require("../images/Brand.jpg")}
+                    source={require("../images/logo13.png ")}
                     style={imageStyle}
                   />
                 </View>
